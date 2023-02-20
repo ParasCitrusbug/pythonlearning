@@ -23,4 +23,5 @@ dict1 = {"Name" :"milan",
         "number" :741258,
         "email" :"milan@gmail.com",
         "age" :20}
+        
 obj.csv_file_write(**dict1)

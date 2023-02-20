@@ -27,7 +27,7 @@ class atm:
         input_pin = int(input("enter your pin: "))
         if input_pin == self.pin:
             input_balance = int(input("Enter the amount: "))
-            if input_balance < self.balance:
+            if input_balance <= self.balance:
                 self.balance = self.balance - input_balance
                 return f"Now your balence is {self.balance} and withdrawal is sucess"
             else:

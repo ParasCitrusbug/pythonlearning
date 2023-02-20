@@ -6,20 +6,18 @@ class re_modual:
         check_re = re.compile("^[A-Z][a-z]+[a-z0-9@#$%^!*&?><]{8,}$")
         
         if re.fullmatch(check_re,pettarn_password):
-            return True
-        else:
-            print("Enter valid Password")
-            return False
+            return check_re
+        else:        
+            return "Enter valid Password"
 
     def email_chack(self,pettarn_email)->bool:
         email_valid = re.compile("^[a-z]+[.]*[a-z0-9]+[@][a-z]+[.][a-z]{2,}$")
 
         if re.fullmatch(email_valid,pettarn_email):
             
-            return True
-        else:
-            print("unvalid email")
-            return False
+            return email_input
+        else: 
+            return "unvalid email"
         
 obj = re_modual()
 
