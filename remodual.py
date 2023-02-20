@@ -1,5 +1,5 @@
 # find the pattern for password
-
+import getpass
 import re
 class re_modual:
     def password_chck(self,pettarn_password) ->bool:
@@ -22,5 +22,9 @@ class re_modual:
             return False
         
 obj = re_modual()
-print(obj.password_chck("Paras123@#"))
-print(obj.email_chack("paras.citrusbug@gmail.com"))
+
+password_input = getpass.getpass("enter password")
+email_input = input("enter email")
+
+print(obj.password_chck(password_input))
+print(obj.email_chack(email_input))

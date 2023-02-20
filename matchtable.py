@@ -1,23 +1,16 @@
-import random
-x = []
-def team(number):  
-    total_match = 0
-    for i in range(1,number+1):
-        for j in range(i+1, number+1):
-            total_match += 1
-            x.append([i,j])
+
+class  Matchs:
     
-team(14)
+    def team(self,number):
+        total_match = 0
+        x = []
+        for i in range(1,number+1):
+            for j in range(i+1, number+1):
+                total_match += 1
+                x.append([i,j])
+        return total_match
+  
 
 
-
-dict_team = {"winner":[], "loss":[]}
-create_team = []
-def check_singale_elination(number):
-    teamlist= []
-    for i,j in random.choice(number,2):
-        te
-
-check_singale_elination(10)
-
-print(create_team)
+obj = Matchs()
+print(obj.team(10))
