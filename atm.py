@@ -1,4 +1,6 @@
-class atm:
+class Atm:
+    """This is work for atm processes."""
+
     def __init__(self, account_holder_name: str, acccount_number: int, balance=0):
         self.account_holder_name = account_holder_name
         self.acccount_number = acccount_number
@@ -6,15 +8,18 @@ class atm:
         self.pin = int
 
     def view_account_info(self) -> str:
+        """Show the account info."""
         return f" account holder name = {self.account_holder_name}\n accountnumber = {self.acccount_number}"
 
     def create_pin(self) -> int:
+        """Create pin for you atm."""
         input_pin = int(input("Enter new pin: "))
         self.pin = input_pin
-        
+
         return f"your pin is {self.pin}"
-        
+
     def add_amount(self) -> str:
+        """Deposite the account yor account."""
         input_pin = int(input("enter your pin: "))
         if input_pin == self.pin:
             input_balance = int(input("Enter the amount: "))
@@ -24,6 +29,7 @@ class atm:
             return f"Invalid pin please enter valid pin"
 
     def withdrawal_amount(self) -> str:
+        """Withdro amount to your account."""
         input_pin = int(input("enter your pin: "))
         if input_pin == self.pin:
             input_balance = int(input("Enter the amount: "))
@@ -36,31 +42,28 @@ class atm:
             return f"Invalid pin please enter valid pin"
 
     def check_balance(self) -> str:
+        """Check balance for your account."""
         input_pin = int(input("enter your pin: "))
         if input_pin == self.pin:
             return f"Your balance is {self.balance}"
         else:
             return f"Invalid pin please enter valid pin"
 
-    def run():
-        print("""
-         1 enter for view account info
-         2 enter create to atm pin 
-         3 enter to add balance
-         4 enter to withdroh balance
-         5 enter check balance""")
-        
-obj =atm("paras",32541)
+
+obj = Atm("paras", 32541)
+
+
 def run():
-    print("""
+    """Run to atm process."""
+    print(
+        """
         1 enter for view account info
         2 enter create to atm pin 
         3 enter to add balance
         4 enter to withdroh balance
         5 enter check balance
-        
-        
-        """)
+        """
+    )
     number = int(input("Enter the number"))
     if number == 1:
         print(obj.view_account_info())
@@ -76,6 +79,5 @@ def run():
         print("please enter valid number for valid opration")
     run()
 
-    
+
 run()
-        
